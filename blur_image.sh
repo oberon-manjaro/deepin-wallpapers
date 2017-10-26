@@ -3,6 +3,7 @@ mkdir -p image-blur
 for inname in ./deepin/*
 do
 	inname=${inname##*/}
+    echo "  ${inname}"
 	md5name=`echo -n /usr/share/wallpapers/deepin/$inname | md5sum`
 	md5name=${md5name%  *}
 	outname=$md5name.jpg
