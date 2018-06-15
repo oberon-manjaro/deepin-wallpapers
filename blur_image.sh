@@ -1,11 +1,11 @@
 #!/bin/bash
 mkdir -p image-blur
-for inname in ./backgrounds/*
+for inname in ./deepin/*
 do
 	inname=${inname##*/}
     echo "  ${inname}"
-	md5name=`echo -n /usr/share/backgrounds/$inname | md5sum`
+	md5name=`echo -n /usr/share/wallpapers/deepin/$inname | md5sum`
 	md5name=${md5name%  *}
 	outname=$md5name.jpg
-	/usr/lib/deepin-api/image-blur --sigma 30 ./backgrounds/$inname ./image-blur/$outname
+	/usr/lib/deepin-api/image-blur --sigma 30 ./wallpapers/deepin/$inname ./image-blur/$outname
 done
